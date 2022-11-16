@@ -2,8 +2,10 @@
 
 ## 참고 자료
 
-+ https://jcdgods.tistory.com/525
++ 라즈베리파이 아두이노 시리얼 통신
 
-+ https://throwexception.tistory.com/920
+++ https://jcdgods.tistory.com/525
 
-+ http://www.3demp.com/community/boardDetails.php?cbID=232 
+++ https://throwexception.tistory.com/920
+
+++ http://www.3demp.com/community/boardDetails.php?cbID=232 
