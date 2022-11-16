@@ -22,6 +22,10 @@
 
 ## 3. 시스템구조
 
+![아두이노_메가-removebg-preview](https://user-images.githubusercontent.com/112140869/202112992-0e8a38f2-c73b-4fb3-9584-d579ea0ba379.png)
+![라즈베리파이-removebg-preview](https://user-images.githubusercontent.com/112140869/202113014-a0e0513c-0477-4ea0-8984-ae47c3eda6d1.png)
+
+
 ## 4. Project
 
 ## 5. 구현 결과 & 결론
