@@ -10,10 +10,18 @@
 
 
 
-## 2. 기술스텍 과 구현환경
+## 2. 기술스택 과 구현환경
 
-https://cocoon1787.tistory.com/689
+### 📚 STACKS
 
+<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+<br>
+
+<img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+<br>
+
+<img src="https://img.shields.io/badge/windows10-0078D4?style=for-the-badge&logo=windows10&logoColor=white">
+<br>
 
 ## 3. 시스템구조
 
@@ -34,3 +42,6 @@ https://cocoon1787.tistory.com/689
 + 라즈베리파이 아두이노 조이스틱 블루투스 연결
 
   + https://monotics.tistory.com/28
+  
++ 기술 스택
+  + https://cocoon1787.tistory.com/689
