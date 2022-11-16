@@ -16,10 +16,8 @@
 
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
 <br>
-
 <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
 <br>
-
 <img src="https://img.shields.io/badge/windows10-0078D4?style=for-the-badge&logo=windows10&logoColor=white">
 <br>
 
