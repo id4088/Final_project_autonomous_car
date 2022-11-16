@@ -8,4 +8,8 @@
 
   + https://throwexception.tistory.com/920
 
-  + http://www.3demp.com/community/boardDetails.php?cbID=232 
+  + http://www.3demp.com/community/boardDetails.php?cbID=232
+  
++ 라즈베리파이 아두이노 조이스틱 블루투스 연결
+
+  + https://monotics.tistory.com/28
