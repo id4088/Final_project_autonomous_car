@@ -63,6 +63,7 @@
 
 + L293D Shield 모터 제어
   + https://eleit.tistory.com/entry/%EC%95%84%EB%91%90%EC%9D%B4%EB%85%B8%EB%AA%A8%ED%84%B0%EC%89%B4%EB%93%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-DC%EB%AA%A8%ED%84%B0-%EA%B5%AC%EB%8F%99%ED%95%98%EA%B8%B0
+  + https://m.blog.naver.com/eduino/220884056251
 
 + String int 변환
   + https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=kim-nan-hee&logNo=221954492559
