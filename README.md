@@ -49,6 +49,11 @@
 + 라즈베리파이 아두이노 조이스틱 블루투스 연결
 
   + https://monotics.tistory.com/28
++ 라즈베리파이 Opencv 카메라 이미지 처리
+
+  + https://diyver.tistory.com/61
+  
+  +https://opencv-python.readthedocs.io/en/latest/doc/09.imageThresholding/imageThresholding.html
   
 + 기술 스택
   + https://cocoon1787.tistory.com/689
