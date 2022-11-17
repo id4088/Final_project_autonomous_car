@@ -53,7 +53,7 @@
 
   + https://diyver.tistory.com/61
   
-  +https://opencv-python.readthedocs.io/en/latest/doc/09.imageThresholding/imageThresholding.html
+  + https://opencv-python.readthedocs.io/en/latest/doc/09.imageThresholding/imageThresholding.html
   
 + 기술 스택
   + https://cocoon1787.tistory.com/689
