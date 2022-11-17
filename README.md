@@ -45,10 +45,13 @@
   + https://throwexception.tistory.com/920
 
   + http://www.3demp.com/community/boardDetails.php?cbID=232
+
+  + https://jung-max.github.io/2020/06/15/Python-serial/
   
 + 라즈베리파이 아두이노 조이스틱 블루투스 연결
 
   + https://monotics.tistory.com/28
+  
 + 라즈베리파이 Opencv 카메라 이미지 처리
 
   + https://diyver.tistory.com/61
@@ -57,3 +60,12 @@
   
 + 기술 스택
   + https://cocoon1787.tistory.com/689
+
++ L293D Shield 모터 제어
+  + https://eleit.tistory.com/entry/%EC%95%84%EB%91%90%EC%9D%B4%EB%85%B8%EB%AA%A8%ED%84%B0%EC%89%B4%EB%93%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-DC%EB%AA%A8%ED%84%B0-%EA%B5%AC%EB%8F%99%ED%95%98%EA%B8%B0
+
++ String int 변환
+  + https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=kim-nan-hee&logNo=221954492559
+
++ arduno String 문자열 분열
+  + https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=okarduino&logNo=220762181563
