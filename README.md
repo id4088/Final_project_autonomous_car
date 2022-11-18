@@ -59,6 +59,8 @@
 
   + https://monotics.tistory.com/28
   
+  + https://raspberrypi.stackexchange.com/questions/121216/how-to-best-handle-raspberry-pi-4-and-smartphone-connection-over-bluetooth-and-p
+  
 + 라즈베리파이 Opencv 카메라 이미지 처리
 
   + https://diyver.tistory.com/61
