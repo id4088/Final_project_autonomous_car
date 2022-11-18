@@ -24,7 +24,7 @@
 
 <img src="https://img.shields.io/badge/windows10-0078D6?style=for-the-badge&logo=windows10&logoColor=white">
 <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
-<img src="https://img.shields.io/badge/arduinoIDE-00979D?style=for-the-badge&logo=arduinoIDE&logoColor=white">
+<img src="https://img.shields.io/badge/arduino IDE-00979D?style=for-the-badge&logo=arduino IDE&logoColor=white">
 <img src="https://img.shields.io/badge/visual studio code-007ACC?style=for-the-badge&logo=visual studio code&logoColor=white">
 
 ## 3. 시스템구조
