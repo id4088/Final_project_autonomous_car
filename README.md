@@ -20,6 +20,13 @@
 <img src="https://img.shields.io/badge/bluetooth-0082FC?style=for-the-badge&logo=bluetooth&logoColor=white">
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 
+### 📚 OS
+
+<img src="https://img.shields.io/badge/windows10-0078D6?style=for-the-badge&logo=windows10&logoColor=white">
+<img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=white">
+<img src="https://img.shields.io/badge/arduinoIDE-00979D?style=for-the-badge&logo=arduinoIDE&logoColor=white">
+<img src="https://img.shields.io/badge/visual studio code-007ACC?style=for-the-badge&logo=visual studio code&logoColor=white">
+
 ## 3. 시스템구조
 
 ![아두이노_메가-removebg-preview](https://user-images.githubusercontent.com/112140869/202112992-0e8a38f2-c73b-4fb3-9584-d579ea0ba379.png)
