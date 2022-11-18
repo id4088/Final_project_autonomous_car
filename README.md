@@ -55,11 +55,15 @@
 
   + https://jung-max.github.io/2020/06/15/Python-serial/
   
-+ 라즈베리파이 아두이노 조이스틱 블루투스 연결
++ 라즈베리파이 아두이노 블루투스 연결
 
   + https://monotics.tistory.com/28
   
   + https://raspberrypi.stackexchange.com/questions/121216/how-to-best-handle-raspberry-pi-4-and-smartphone-connection-over-bluetooth-and-p
+  
+  + https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=beaqon&logNo=221411638205
+  
+  + https://stackoverflow.com/questions/36099960/how-to-connect-to-raspberry-pi-with-an-android-app-over-bluetooth
   
 + 라즈베리파이 Opencv 카메라 이미지 처리
 
@@ -79,10 +83,6 @@
 
 + arduno String 문자열 분열
   + https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=okarduino&logNo=220762181563
-  
-+ bluetooth 설정
-  + https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=beaqon&logNo=221411638205
-  + https://stackoverflow.com/questions/36099960/how-to-connect-to-raspberry-pi-with-an-android-app-over-bluetooth
   
 + while문 참고
   + https://sagittariusof85s.tistory.com/143
