@@ -77,3 +77,10 @@
 
 + arduno String 문자열 분열
   + https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=okarduino&logNo=220762181563
+  
++ bluetooth 설정
+  + https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=beaqon&logNo=221411638205
+  + https://stackoverflow.com/questions/36099960/how-to-connect-to-raspberry-pi-with-an-android-app-over-bluetooth
+  
++ while문 참고
+  + https://sagittariusof85s.tistory.com/143
