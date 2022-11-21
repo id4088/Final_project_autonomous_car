@@ -90,8 +90,19 @@
 + 라즈베리파이 부팅시 프로그램 자동 실행
   + https://m.blog.naver.com/emperonics/221770579539
 
-+ 텐서플로우 삭제
++ 텐서플로우 
+
+  + https://blog.naver.com/PostView.naver?blogId=beodeulpiri&logNo=222846798881&parentCategoryNo=&categoryNo=37&viewDate=&isShowPopularPosts=true&from=search
+  
+  + https://dyddl1993.tistory.com/34
+  
+  + https://velog.io/@mythos/Raspberry-Pi-4-Python-%EB%B2%84%EC%A0%84-%EA%B4%80%EB%A6%AC
+  
   + https://dreamtip.tistory.com/18
+  
+  + https://lindevs.com/install-precompiled-tensorflow-lite-on-raspberry-pi (tensorflow lite)
+  
+  + https://qengineering.eu/install-tensorflow-2.4.0-on-raspberry-64-os.html
 
 + Opencv 버전 변경
   + https://nuggy875.tistory.com/86
