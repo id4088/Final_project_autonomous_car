@@ -86,3 +86,6 @@
   
 + while문 참고
   + https://sagittariusof85s.tistory.com/143
+
++ 라즈베리파이 부팅시 프로그램 자동 실행
+  + https://m.blog.naver.com/emperonics/221770579539
