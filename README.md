@@ -89,3 +89,9 @@
 
 + 라즈베리파이 부팅시 프로그램 자동 실행
   + https://m.blog.naver.com/emperonics/221770579539
+
++ 텐서플로우 삭제
+  + https://dreamtip.tistory.com/18
+
++ Opencv 버전 변경
+  + https://nuggy875.tistory.com/86
