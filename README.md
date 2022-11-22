@@ -106,3 +106,7 @@
 
 + Opencv 버전 변경
   + https://nuggy875.tistory.com/86
+  
++ can 통신
+
+ + https://memories.tistory.com/129
