@@ -116,3 +116,7 @@
   + https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=mts90&logNo=221542266246&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView
 
   + https://forum.arduino.cc/t/canbus-shield-can-init-failing/867955
+  
++ Rx Tx serial 통신
+  
+  + https://oscarliang.com/raspberry-pi-and-arduino-connected-serial-gpio/
