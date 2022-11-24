@@ -131,7 +131,7 @@ int main(){
     pthread_t send_thread;
 
     struct can_frame recieve_frame;
-	struct can_frame send_frame;
+    struct can_frame send_frame;
 
     init_bind_socket_can(); // 소켓 초기화
 
