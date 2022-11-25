@@ -132,8 +132,6 @@
 + 모바일 VNC Viewer
 
   + https://digital-play.tistory.com/30
-  
-  + https://digital-play.tistory.com/30
 
 + python class 정적변수
   
