@@ -65,6 +65,8 @@
   
   + https://stackoverflow.com/questions/36099960/how-to-connect-to-raspberry-pi-with-an-android-app-over-bluetooth
   
+  + https://koboogy.tistory.com/8
+  
 + 라즈베리파이 Opencv 카메라 이미지 처리
 
   + https://diyver.tistory.com/61
