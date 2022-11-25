@@ -122,3 +122,11 @@
 + Rx Tx serial 통신
   
   + https://oscarliang.com/raspberry-pi-and-arduino-connected-serial-gpio/
+
++ pyPS4Controller
+
+  + https://github.com/ArturSpirin/pyPS4Controller
+
++ 모바일 VNC Viewer
+
+  + https://digital-play.tistory.com/30
