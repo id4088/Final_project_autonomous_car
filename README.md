@@ -75,6 +75,10 @@
   
   + https://scribblinganything.tistory.com/473
   
+  + https://webnautes.tistory.com/1270
+  
+  + https://m.blog.naver.com/samsjang/220516822775
+  
 + 기술 스택
   + https://cocoon1787.tistory.com/689
 
