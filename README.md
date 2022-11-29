@@ -141,3 +141,7 @@
 + python class 정적변수
   
   + https://zetawiki.com/wiki/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%EC%A0%84%EC%97%AD%EB%B3%80%EC%88%98%EB%A5%BC_%ED%81%B4%EB%9E%98%EC%8A%A4_%EC%A0%95%EC%A0%81%EB%B3%80%EC%88%98%EB%A1%9C_%EA%B5%AC%ED%98%84
+
++ VScode 가상환경 설정
+
+  + https://useful-jang.tistory.com/74
