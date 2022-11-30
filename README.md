@@ -81,6 +81,8 @@
   + https://m.blog.naver.com/samsjang/220516822775
 
   + https://diy-project.tistory.com/115
+
+  + https://codezaram.tistory.com/44?category=1281352
   
 + 기술 스택
   + https://cocoon1787.tistory.com/689
