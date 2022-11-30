@@ -83,6 +83,8 @@
   + https://diy-project.tistory.com/115
 
   + https://codezaram.tistory.com/44?category=1281352
+
+  + https://github.com/lky9620/Ta-Yo/blob/main/Raspberry-Pi/line_detect.py
   
 + 기술 스택
   + https://cocoon1787.tistory.com/689
