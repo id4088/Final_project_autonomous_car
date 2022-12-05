@@ -153,25 +153,9 @@ void loop() {
 void serialEvent(){
     while (Serial.available())
     {
-        char a  = Serial.read();
+        char read_data  = Serial.read();
 
-        // int first = a.indexOf("_");
-        // int second = a.indexOf("_",first + 1);
-        // int length = a.length();
-
-        // String b = a.substring(0, first);
-        // String c = a.substring(first + 1, second);
-        
-        // char e = b.charAt(0);
-        // int d = c.toInt();
-
-        // if(b == "Forward"){ _Forward(d); }
-        // if(b == "Back"){ _Back(d); }
-        // if(b == "Left"){ _Left(d); }
-        // if(b == "Right"){ _Right(d); }
-        // if(b == "Stop"){ _Stop(); }
-
-        switch(a){
+        switch(read_data){
             case 'F':
                 _Forward();
                 break;
