@@ -12,7 +12,7 @@
 
 ## 2. 기술스택 과 구현환경
 
-### 📚 STACKS
+### <div align=center><h1>📚 STACKS</h1></div>
 
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
 <img src="https://img.shields.io/badge/arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white">
