@@ -39,19 +39,83 @@
 
 ### 4.1 Serial 및 Bluetooth 통신
 #### 4.1.1 RPI4 serial 및 bluetooth
- 1. 
- 2. 
+ 1. Threading, serial 라이브러리와 pyPS4Controller 라이브러리 사용
+ 2. 시리얼 포트 ttyACM0 포트로 아두이노 시리얼 통신
+ 3. ps4 듀얼 쇼크4 를 사용하기 위한 Class 생성 및 Class 상속 사용
+ 4. ps4 듀얼 쇼크4 포트 js0 포트로 Bluetooth 통신
 ---
-헤더파일 선언
+헤더파일 및 전역변수
 ```
-#include <SPI.h>
-#include <mcp_can.h>
+import threading
+import serial , time
+from pyPS4Controller.controller import Controller
 
-#define spiCSPin_mega 53
+ArduinoSerial = serial.Serial(port = "/dev/ttyACM0", 
+	baudrate= 115200,
+	timeout= 1)
 
-MCP_CAN CAN(spiCSPin_mega);
+strdata = "on_x_press"
+
+controller = MyController(interface="/dev/input/js0", connecting_using_ds4drv=False)
 ```
+---
+ps4 듀얼 쇼크4 사용을 위한 MyController 클래스 및 Global 클래스
+```
+class Global(object):
+    state = 1
+    img_count = 1
+    Direction = ""
+    Angle = 0
 
+class MyController(Controller, Global):
+
+    def __init__(self, **kwargs):
+        Controller.__init__(self, **kwargs)
+
+    def on_up_arrow_press(self):
+        Global.Direction ="F"
+        ArduinoSerial.write(Global.Direction.encode())
+       
+    def on_down_arrow_press(self):
+        Global.Direction ="B"
+        ArduinoSerial.write(Global.Direction.encode())
+
+    def on_left_arrow_press(self):
+        Global.Direction ="L"
+        ArduinoSerial.write(Global.Direction.encode())
+
+    def on_right_arrow_press(self):
+        Global.Direction ="R"
+        ArduinoSerial.write(Global.Direction.encode())
+    
+    def on_square_press(self):
+        Global.Direction ="S"
+        ArduinoSerial.write(Global.Direction.encode())
+    
+    def on_x_press(self):
+        Global.state = 1
+            
+    def on_circle_press(self):
+        Global.state = 0
+```
+---
+조이스틱 Thread
+```
+def Thread_Joystick():
+
+    controller.listen()
+
+    while True:
+                
+        controller.on_up_arrow_press()
+
+        controller.on_down_arrow_press()
+                
+        controller.on_left_arrow_press()
+
+        controller.on_right_arrow_press()
+```
+---
 ### 4.2 
 
 ### 4.3 
