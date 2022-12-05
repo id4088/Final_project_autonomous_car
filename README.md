@@ -37,14 +37,23 @@
 + Tenserflow 와 OpenCV를 활용한 이미지 인식 딥러닝 구현
 + Bluetooth 통신 기반 원격 제어 (?)
 
-#### 4-1 CAN
+### 4.1 CAN
+#### 4.1.1 Arduino Mega CAN
+ 1. MCP2515-lib-master 라이브러리 사용
+ 2. 인터럽트를 사용한 데이터 수신
+---
 ```
-code
+#include <SPI.h>
+#include <mcp_can.h>
+
+#define spiCSPin_mega 53
+
+MCP_CAN CAN(spiCSPin_mega);
 ```
 
-#### 4-2 JoyStick
+### 4-2 JoyStick
 
-#### 4-3 opencv
+### 4-3 opencv
 
 
 ## 5. 구현 결과 & 결론
