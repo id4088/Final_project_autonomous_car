@@ -259,6 +259,78 @@ void loop(){
 }
 ```
 ---
+#### 4.3.2 Arduino Mega CAN 통신
+---
+헤더파일 및 전역변수
+```c++
+#include <SPI.h>
+#include <mcp_can.h>
+
+#define spiCSPin_mega 53
+
+MCP_CAN CAN(spiCSPin_mega);
+```
+---
+Interrupt 발생 시 동작하는 함수
+```c++
+void CAN_INT(){
+    unsigned char len = 0;
+    unsigned char buf[8];
+    
+
+    CAN.readMsgBuf(&len,buf); // CAN 데이터 가져오기
+    unsigned long canId = CAN.getCanId(); // CAN ID 얻기
+    switch (canId)
+    {
+    case 0x90:
+        Serial.print("\nData from ID : 0x");
+        Serial.println(canId,HEX); // 16진수로 ID 출력
+        for(int i=0;i<len;i++){
+            Serial.print(buf[i]);
+            Serial.print("\t");
+        }
+        Serial.print("\n");
+        
+        break;
+    
+    default:
+        break;
+    }
+    
+}
+```
+---
+setup 설정 및 Interrupt 설정
+```c++
+void setup() {
+
+    Serial.begin(115200);
+    init_Motor();
+
+    while ( CAN_OK != CAN.begin(CAN_500KBPS))
+    {
+        Serial.println("CAN BUS init Failed");
+        delay(100);
+    }
+    Serial.println("CAN BUS Shield Init OK!");
+
+    attachInterrupt(digitalPinToInterrupt(2),CAN_INT,FALLING);
+
+}
+```
+---
+loop 설정
+초음파로 측정한 거리값 20 이하일 시 모터 정지
+```c++
+void loop() {
+    if(ultra_distance <= 20.00){
+        _Stop();
+    }
+    
+}
+```
+---
+
 
 ## 5. 구현 결과 & 결론
 
