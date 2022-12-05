@@ -152,8 +152,113 @@ void serialEvent(){
 ---
 ### 4.2 
 
-### 4.3 
+### 4.3 Arduino 초음파 CAN 통신
+ 1. Interrupt를 사용한 데이터 수신
+ 2. MCP2515-lib-master 라이브러리 및 SPI 라이브러리 사용
+#### 4.3.1 Arduino Uno CAN 및 초음파
+---
+헤더파일 및 전역변수
+```c++
+#include <SPI.h>
+#include <mcp_can.h>
 
+#define spiCSPin 10
+
+#define TRIGPin 9
+#define ECHOPin 8
+
+MCP_CAN CAN(spiCSPin);
+```
+---
+Interrupt 발생 시 동작하는 함수
+```c++
+void CAN_INT(){
+    unsigned char len = 0;
+    unsigned char buf[8];
+    
+
+    CAN.readMsgBuf(&len,buf); // CAN 데이터 가져오기
+    unsigned long canId = CAN.getCanId(); // CAN ID 얻기
+    switch (canId)
+    {
+    case 0x80:
+        Serial.print("\nData from ID : 0x");
+        Serial.println(canId,HEX); // 16진수로 ID 출력
+        for(int i=0;i<len;i++){
+            Serial.print(buf[i]);
+            Serial.print("\t");
+        }
+        Serial.print("\n");
+        
+        break;
+    
+    default:
+        break;
+    }
+    
+}
+```
+---
+초음파 데이터
+```c++
+float read_Ultrasonic() {
+    float return_time;
+    float time_took;
+    
+    digitalWrite(TRIGPin, HIGH);
+    
+    delay(5);
+    
+    digitalWrite(TRIGPin, LOW);
+    
+    return_time = pulseIn(ECHOPin, HIGH);
+    time_took = 340.0f * return_time / 10000.0f / 2.0f;
+    
+    return time_took;
+}
+```
+---
+초음파 데이터 전송
+```c++
+void Send_Ultrasonic_data(){
+    distance_union du;
+    unsigned char data[8];
+
+    du.first = read_Ultrasonic();
+    for(int i=0; i<8; i++){
+        data[i] = du.second[i];
+    }
+
+    CAN.sendMsgBuf(0x90,0,8,data);
+    delay(250);
+}
+```
+---
+setup 설정 및 Interrupt 설정
+```c++
+void setup(){
+    Serial.begin(115200);
+    init_Ultrasonic();
+    
+    while ( CAN_OK != CAN.begin(CAN_500KBPS))
+    {
+        Serial.println("CAN BUS init Failed");
+        delay(100);
+    }
+    Serial.println("CAN BUS Shield Init OK!");
+
+    attachInterrupt(digitalPinToInterrupt(2),CAN_INT,FALLING);
+    
+}
+```
+---
+loop 설정
+```c++
+void loop(){
+    Send_Ultrasonic_data();
+}
+```
+---
 
 ## 5. 구현 결과 & 결론
 
