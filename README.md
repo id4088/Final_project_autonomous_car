@@ -46,8 +46,12 @@
 ---
 헤더파일 및 전역변수
 ```python
+import cv2
+import numpy as np
 import threading
 import serial , time
+import enum
+import os
 from pyPS4Controller.controller import Controller
 
 ArduinoSerial = serial.Serial(port = "/dev/ttyACM0", 
@@ -55,6 +59,7 @@ ArduinoSerial = serial.Serial(port = "/dev/ttyACM0",
 	timeout= 1)
 
 strdata = "on_x_press"
+IMGpath ="/home/pi/project/Finalproject/Track_Img/"
 
 controller = MyController(interface="/dev/input/js0", connecting_using_ds4drv=False)
 ```
@@ -116,6 +121,84 @@ def Thread_Joystick():
         controller.on_right_arrow_press()
 ```
 ---
+opencv로 카메라 제어 Thread
+```python
+def Thread_CAM():
+    camera = cv2.VideoCapture(0)
+    camera.set(3,320)
+    camera.set(4,160)
+        
+    while( camera.isOpened()):
+            
+            
+           
+
+        if Global.state == 1:
+            while True:
+                    
+                if Global.state == 0:
+                        
+                    break
+
+
+        _, image = camera.read()
+            
+
+        crop_img = image[80:160,0:320]
+
+        gray = cv2.cvtColor(crop_img, cv2.COLOR_RGB2GRAY)
+
+        blur = cv2.GaussianBlur(gray,(5,5),0)
+
+        ret, thresh1 = cv2.threshold(blur,95,255,cv2.THRESH_BINARY)
+
+        save_image = cv2.erode(thresh1, None, iterations=1)
+        save_image = cv2.dilate(save_image, None, iterations=3)
+        cv2.imshow("save_img", save_image)
+        
+            
+        print(Global.Direction)
+        print(Global.img_count)
+        if Global.Direction == "F":
+            Global.Angle =90
+            print(Global.Angle)
+            cv2.imwrite("%s_%05d_%03d.png" % (IMGpath,Global.img_count,Global.Angle), save_image)
+            Global.img_count = Global.img_count + 1
+        elif Global.Direction == "L":
+            Global.Angle =45
+            cv2.imwrite("%s_%05d_%03d.png" % (IMGpath,Global.img_count,Global.Angle), save_image)
+            Global.img_count = Global.img_count + 1
+        elif Global.Direction == "R":
+            Global.Angle =135
+            cv2.imwrite("%s_%05d_%03d.png" % (IMGpath,Global.img_count,Global.Angle), save_image)
+            Global.img_count = Global.img_count + 1
+           
+        print('End')
+
+        # cv2.imwrite("%s_%05d_%03d.png" % (IMGpath,Global.img_count,Global.Angle), save_image)
+        # Global.img_count += 1
+
+
+        cv2.waitKey(300)
+
+        
+        if cv2.waitKey(1) == ord( 'q' ):
+            break
+
+    cv2.destroyAllWindows()
+```
+---
+Thread 시작
+```python
+if __name__ == '__main__':
+    
+    task1 = threading.Thread(target= Thread_Joystick)
+    task2 = threading.Thread(target= Thread_CAM)
+
+    task1.start()
+    task2.start()
+```
+---
 #### 4.1.2 Arduino Mega Serial 통신
  1. ttyACM0 포트로 시리얼 통신
  2. serialEvent 함수 사용
@@ -152,6 +235,7 @@ void serialEvent(){
 ---
 ### 4.2 
 
+---
 ### 4.3 Arduino 초음파 CAN 통신
  1. Interrupt를 사용한 데이터 수신
  2. MCP2515-lib-master 라이브러리 및 SPI 라이브러리 사용
