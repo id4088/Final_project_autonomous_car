@@ -120,6 +120,7 @@ def Thread_Joystick():
  1. ttyACM0 포트로 시리얼 통신
  2. serialEvent 함수 사용
 ---
+시리얼 통신을 통해서 데이터가 입력될 때 자동으로 호출되는 함수인 serialEvent 함수
 ```c++
 void serialEvent(){
     while (Serial.available())
