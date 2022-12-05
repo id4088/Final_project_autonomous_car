@@ -116,6 +116,39 @@ def Thread_Joystick():
         controller.on_right_arrow_press()
 ```
 ---
+#### 4.1.2 Arduino Mega Serial 통신
+ 1. ttyACM0 포트로 시리얼 통신
+ 2. serialEvent 함수 사용
+---
+```arduino
+void serialEvent(){
+    while (Serial.available())
+    {
+        char read_data  = Serial.read();
+
+        switch(read_data){
+            case 'F':
+                _Forward();
+                break;
+            case 'B':
+                _Back();
+                break;
+            case 'L':
+                _Left();
+                break;
+            case 'R':
+                _Right();
+                break;
+            case 'S':
+                _Stop();
+                break;
+
+        }
+
+    }
+}
+```
+---
 ### 4.2 
 
 ### 4.3 
