@@ -45,7 +45,7 @@
  4. ps4 듀얼 쇼크4 포트 js0 포트로 Bluetooth 통신
 ---
 헤더파일 및 전역변수
-```
+```python
 import threading
 import serial , time
 from pyPS4Controller.controller import Controller
@@ -60,7 +60,7 @@ controller = MyController(interface="/dev/input/js0", connecting_using_ds4drv=Fa
 ```
 ---
 ps4 듀얼 쇼크4 사용을 위한 MyController 클래스 및 Global 클래스
-```
+```python
 class Global(object):
     state = 1
     img_count = 1
@@ -100,7 +100,7 @@ class MyController(Controller, Global):
 ```
 ---
 조이스틱 Thread
-```
+```python
 def Thread_Joystick():
 
     controller.listen()
