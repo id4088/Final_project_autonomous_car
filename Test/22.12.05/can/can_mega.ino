@@ -6,7 +6,7 @@
 #define spiCSPin 10
 #define spiCSPin_mega 53
 
-MCP_CAN CAN(spiCSPin);
+MCP_CAN CAN(spiCSPin_mega);
 
 AF_DCMotor FRmotor(2);
 AF_DCMotor FLmotor(1);
