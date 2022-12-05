@@ -120,7 +120,7 @@ def Thread_Joystick():
  1. ttyACM0 포트로 시리얼 통신
  2. serialEvent 함수 사용
 ---
-```arduino
+```c++
 void serialEvent(){
     while (Serial.available())
     {
