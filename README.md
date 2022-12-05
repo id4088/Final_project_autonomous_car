@@ -4,9 +4,9 @@
 
 > 딥러닝 기반으로 움직이는 자율주행 RC카를 라즈베리파이와 아두이노를 연계하여 구현한다.
 
-+ Bluetooth , Serial 통신을 이용하여 컨트롤러로 조종이 가능한 RC카 제작
-+ tensorflow를 활용하여 CNN구조의 딥러닝 자율주행 RC카 구현 (tcp/ip 컴퓨터 통신~)
-+ (추가) Can bus 통신으로 아두이노를 추가로 연결해 센서(초음파)를 이용한 데이터 수집 
++
++
++
 
 
 
@@ -37,14 +37,24 @@
 + Tenserflow 와 OpenCV를 활용한 이미지 인식 딥러닝 구현
 + Bluetooth 통신 기반 원격 제어 (?)
 
-#### 4-1 CAN
+### 4.1 CAN
+#### 4.1.1 Arduino Mega CAN
+ 1. MCP2515-lib-master 라이브러리 사용
+ 2. 인터럽트를 사용한 데이터 수신
+---
+헤더파일 선언
 ```
-code
+#include <SPI.h>
+#include <mcp_can.h>
+
+#define spiCSPin_mega 53
+
+MCP_CAN CAN(spiCSPin_mega);
 ```
 
-#### 4-2 JoyStick
+### 4-2 JoyStick
 
-#### 4-3 opencv
+### 4-3 opencv
 
 
 ## 5. 구현 결과 & 결론
