@@ -37,11 +37,11 @@
 + Tenserflow 와 OpenCV를 활용한 이미지 인식 딥러닝 구현
 + Bluetooth 통신 기반 원격 제어 (?)
 
-++ 4-1 CAN
+#### 4-1 CAN
 
-++ 4-2 JoyStick
+#### 4-2 JoyStick
 
-++ 4-3 opencv
+#### 4-3 opencv
 
 
 ## 5. 구현 결과 & 결론
