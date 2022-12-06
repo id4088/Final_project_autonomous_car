@@ -739,7 +739,7 @@ void loop(){
 }
 ```
 ---
-#### 4.3.2 Arduino Mega CAN 통신
+#### 4.3.2 Arduino Mega CAN 통신 및 Buzzer 알람
 ---
 헤더파일 및 전역변수
 ```c++
