@@ -831,9 +831,7 @@ void serialEvent(){
 
 ## 5. 구현 결과 & 결론
 
-![20221206_162006](https://user-images.githubusercontent.com/112140869/205859861-e2cd4a4b-6708-4ae7-85ae-27e2632ea39d.jpg)
 
-![20221206_162437](https://user-images.githubusercontent.com/112140869/205859883-47f4d584-a4d3-4f4b-b09f-9534a75b773b.jpg)
 
 
 ## 참고 자료
