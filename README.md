@@ -282,7 +282,9 @@ import matplotlib.image as mpimg
 
 #matplotlib inline
 from PIL import Image
-
+---
+ 모델 
+ ```python
 def my_imread(image_path):
     image = cv2.imread(image_path)
     return image
@@ -332,7 +334,10 @@ def image_data_generator(image_paths, steering_angles, batch_size):
         yield(np.asarray(batch_images),np.asarray(batch_steering_angles))
 
 
+---
+수집한 데이터 전처리 및 모델 
 
+ ```python
 data_dir = "C:\\Users\\KOSTA\\tensorflow\\video"
 file_list = os.listdir(data_dir)
 image_paths=[]
@@ -412,7 +417,10 @@ with open(history_path,"wb") as f:
 
 
 from sklearn.metrics import mean_squared_error, r2_score
-
+---
+결과 확인하기
+ ```python
+ 
 history.history
 
 history_path = os.path.join(model_output_dir,'history.pickle')
