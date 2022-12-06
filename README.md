@@ -244,7 +244,7 @@ void serialEvent(){
 ---
 헤더파일 및 전역변수
  ```python
- import os
+import os
 import random
 import fnmatch
 import datetime
@@ -452,7 +452,7 @@ for i in range(n_tests_show):
     axes[i].set_title(f' actual angle={y_test[i]}, predicted angle ={int(y_pred[i])}, diff ={int(y_pred[i])-y_test[i]}')
 
 plt.show()
-
+```
 ---
  실시간 자율주행 (구현 실패)
 
