@@ -643,7 +643,6 @@ if __name__ == '__main__':
 #include <mcp_can.h>
 
 #define spiCSPin 10
-#define speakerPin 25
 
 #define TRIGPin 9
 #define ECHOPin 8
@@ -748,6 +747,7 @@ void loop(){
 #include <mcp_can.h>
 
 #define spiCSPin_mega 53
+#define speakerPin 25
 
 MCP_CAN CAN(spiCSPin_mega);
 ```
