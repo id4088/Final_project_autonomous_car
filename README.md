@@ -282,11 +282,11 @@ import matplotlib.image as mpimg
 
 #matplotlib inline
 from PIL import Image
-
+```
 ---
  
  모델 
- ```python
+```python
 def my_imread(image_path):
     image = cv2.imread(image_path)
     return image
