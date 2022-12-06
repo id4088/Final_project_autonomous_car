@@ -335,7 +335,7 @@ def image_data_generator(image_paths, steering_angles, batch_size):
 
         yield(np.asarray(batch_images),np.asarray(batch_steering_angles))
 
-
+```
 ---
 
 수집한 데이터 전처리 및 모델 
@@ -418,12 +418,13 @@ history_path = os.path.join(model_output_dir,'history.pickle')
 with open(history_path,"wb") as f:
     pickle.dump(history.history,f,pickle.HIGHEST_PROTOCOL)
 
-
-from sklearn.metrics import mean_squared_error, r2_score
+```
 ---
 결과 확인하기
+
  ```python
- 
+from sklearn.metrics import mean_squared_error, r2_score
+
 history.history
 
 history_path = os.path.join(model_output_dir,'history.pickle')
