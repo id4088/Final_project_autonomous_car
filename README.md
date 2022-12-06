@@ -282,7 +282,9 @@ import matplotlib.image as mpimg
 
 #matplotlib inline
 from PIL import Image
+
 ---
+ 
  모델 
  ```python
 def my_imread(image_path):
@@ -335,6 +337,7 @@ def image_data_generator(image_paths, steering_angles, batch_size):
 
 
 ---
+
 수집한 데이터 전처리 및 모델 
 
  ```python
