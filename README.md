@@ -786,6 +786,7 @@ void setup() {
 
     Serial.begin(115200);
     init_Motor();
+    init_Buzzer();
 
     while ( CAN_OK != CAN.begin(CAN_500KBPS))
     {
@@ -799,14 +800,29 @@ void setup() {
 }
 ```
 ---
-loop 설정
-초음파로 측정한 거리값 20 이하일 시 모터 정지
+초음파로 측정한 거리값 20 이하일 시 모터 정지 및 Buzzer
 ```c++
-void loop() {
+void _Buzzer(){
+    for(int i = 0; i<3; i++){
+      tone(speakerPin,200,100);
+      delay(500);
+    }
+    noTone(speakerPin);
+    delay(500);
+}
+
+void loop(){
+    _Buzzer();
+    delay(500);
+}
+
+void serialEvent(){
+    
+    ...
+
     if(ultra_distance <= 20.00){
         _Stop();
     }
-    
 }
 ```
 ---
