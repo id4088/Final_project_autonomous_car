@@ -325,7 +325,7 @@ Arduino Mega 헤더파일 및 전역변수
 MCP_CAN CAN(spiCSPin_mega);
 ```
 ---
-데이터 수신할 때 동작하는 CAN 통신
+Arduino Mega CAN 통신 수신 함수
 ```c++
 void CAN_INT(){
     unsigned char len = 0;
