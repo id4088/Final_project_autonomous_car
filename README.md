@@ -38,8 +38,8 @@
 ## 4. Project
 
 + Serial 통신을 활용한 제어 시스템칸 데이터 교환 & 제어 연계 시스템 구축
-+ Tenserflow 와 OpenCV를 활용한 이미지 인식 딥러닝 구현
 + ps4 듀얼 쇼크와 bluetooth 통신하여 RC 카 제어
++ Tenserflow 와 OpenCV를 활용한 이미지 인식 딥러닝 구현
 
 ### 4.1 Serial 및 Bluetooth 통신
 #### 4.1.1 RPI4 serial 및 bluetooth
