@@ -404,8 +404,10 @@ void serialEvent(){
  1. 수집한 데이터로 모델을 딥러닝
  2. 실시간 데이터를 모델에 적용하여 자율주행 구현
 
+#### 4.3.1 Tensorflow Modeling
+
 ---
-RPI4 헤더파일 및 전역변수
+PC python 헤더파일 및 전역변수
  ```python
 import os
 import random
@@ -447,8 +449,7 @@ import matplotlib.image as mpimg
 from PIL import Image
 ```
 ---
- 
- 모델 
+Tensorflow Modeling 함수
 ```python
 def my_imread(image_path):
     image = cv2.imread(image_path)
@@ -500,9 +501,7 @@ def image_data_generator(image_paths, steering_angles, batch_size):
 
 ```
 ---
-
-수집한 데이터 전처리 및 모델 
-
+데이터 전처리 및 모델  
  ```python
 data_dir = "C:\\Users\\KOSTA\\tensorflow\\video"
 file_list = os.listdir(data_dir)
@@ -566,7 +565,7 @@ with open(history_path,"wb") as f:
 
 ```
 ---
-결과 확인하기
+Modeling 결과 확인
 
  ```python
 from sklearn.metrics import mean_squared_error, r2_score
@@ -612,7 +611,8 @@ for i in range(n_tests_show):
 plt.show()
 ```
 ---
- 실시간 자율주행 (구현 실패)
+#### 4.3.1 자율주행
+---
  ```python
  import cv2
 import numpy as np
