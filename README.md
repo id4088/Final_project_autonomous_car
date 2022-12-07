@@ -558,33 +558,11 @@ Image_change_Angle['Angle'] = steering_angle
 num_of_bins = 25
 hist, bins = np.histogram(Image_change_Angle['Angle'],num_of_bins)
 
-# fig, axes = plt.subplots(1,1,figsize=(12,4))
-# axes.hist(Image_change_Angle['Angle'],bins=num_of_bins,width=1,color='blue')
-
-##plt.show()
-
 X_train, X_valid, y_train, y_valid = train_test_split( image_paths, steering_angle, test_size=0.2)
 print("Trainin data: %d\n Validation data: %d" %(len(X_train), len(X_valid)))
 
-# fig, axes = plt.subplots(1,2,figsize =(12,4))
-# axes[0].hist(y_train,bins = num_of_bins, width=1,color ='blue')
-# axes[0].set_title('Training Data')
-# axes[1].hist(y_valid, bins = num_of_bins, width =1, color = 'red')
-# axes[1].set_title('Validation Data')
-
-
-# fig, axes = plt.subplots(1, 2,figsize=(15,10))
-# image_orig = my_imread(image_paths[image_index])
-# image_processed = img_preprocess(image_orig)
-
-# axes[0].imshow(image_orig)
-# axes[0].set_title("orig")
-# axes[1].imshow(image_processed)
-# axes[1].set_title("processed")
-
 model =nvidia_model()
 print(model.summary())
-#plt.show()
 
 ncol =2
 nrow =2
@@ -739,8 +717,6 @@ def Thread_Joystick():
 
         controller.on_right_arrow_press()
             
-            
-            
 
 def Thread_CAM():
     camera = cv2.VideoCapture(0)
@@ -749,10 +725,7 @@ def Thread_CAM():
         
     model_path ='/home/pi/project/Finalproject/machineLearning/model/lane_navigation_final.h5'
     model = load_model(model_path)
-    while( camera.isOpened()):
-            
-            
-           
+    while( camera.isOpened()):  
 
         if Global.state == 1:
             while True:
@@ -761,11 +734,8 @@ def Thread_CAM():
                         
                     break
 
-
         _, image = camera.read()
-            
-        # cv2.imshow('Original',image)
-
+          
         height,_,ch =image.shape
         image=image[int(height/2):,:,:]
         print(ch)
@@ -785,7 +755,6 @@ def Thread_CAM():
         
         X =np.asarray([processed_image])
         steering_angle = int(model.predict(X)[0])
-        # print("predict angle:",steering_angle)
 
         print(Global.Direction)
         print(Global.img_count)
@@ -812,17 +781,13 @@ def Thread_CAM():
 
     cv2.destroyAllWindows()
 
-
-
 if __name__ == '__main__':
     
     task1 = threading.Thread(target= Thread_Joystick)
     task2 = threading.Thread(target= Thread_CAM)
 
     task1.start()
-    task2.start()
-    
-    
+    task2.start() 
 ```
 
 ---
