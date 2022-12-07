@@ -13,32 +13,6 @@ union distance_union{
     unsigned char second[8];
 };
 
-void CAN_INT(){
-    unsigned char len = 0;
-    unsigned char buf[8];
-    
-
-    CAN.readMsgBuf(&len,buf); // CAN 데이터 가져오기
-    unsigned long canId = CAN.getCanId(); // CAN ID 얻기
-    switch (canId)
-    {
-    case 0x80:
-        Serial.print("\nData from ID : 0x");
-        Serial.println(canId,HEX); // 16진수로 ID 출력
-        for(int i=0;i<len;i++){
-            Serial.print(buf[i]);
-            Serial.print("\t");
-        }
-        Serial.print("\n");
-        
-        break;
-    
-    default:
-        break;
-    }
-    
-}
-
 void init_Ultrasonic(){
     pinMode(TRIGPin, OUTPUT);
     pinMode(ECHOPin, INPUT);
@@ -83,8 +57,6 @@ void setup(){
         delay(100);
     }
     Serial.println("CAN BUS Shield Init OK!");
-
-    attachInterrupt(digitalPinToInterrupt(2),CAN_INT,FALLING);
     
 }
 
