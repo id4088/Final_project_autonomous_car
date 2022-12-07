@@ -290,7 +290,7 @@ void Send_Ultrasonic_data(){
 }
 ```
 ---
-setup 설정 및 Interrupt 설정
+Arduino uno CAN 통신 setup
 ```c++
 void setup(){
     Serial.begin(115200);
@@ -301,14 +301,11 @@ void setup(){
         Serial.println("CAN BUS init Failed");
         delay(100);
     }
-    Serial.println("CAN BUS Shield Init OK!");
-
-    attachInterrupt(digitalPinToInterrupt(2),CAN_INT,FALLING);
-    
+    Serial.println("CAN BUS Shield Init OK!");    
 }
 ```
 ---
-loop 설정
+Arduino uno 초음파 데이터 수집 loop
 ```c++
 void loop(){
     Send_Ultrasonic_data();
@@ -357,7 +354,7 @@ void CAN_INT(){
 }
 ```
 ---
-setup 설정 및 Interrupt 설정
+Arduino mega CAN 통신 setup
 ```c++
 void setup() {
 
