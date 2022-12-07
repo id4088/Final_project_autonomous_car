@@ -255,36 +255,7 @@ void serialEvent(){
 MCP_CAN CAN(spiCSPin);
 ```
 ---
-Interrupt 발생 시 동작하는 함수
-```c++
-void CAN_INT(){
-    unsigned char len = 0;
-    unsigned char buf[8];
-    
-
-    CAN.readMsgBuf(&len,buf); // CAN 데이터 가져오기
-    unsigned long canId = CAN.getCanId(); // CAN ID 얻기
-    switch (canId)
-    {
-    case 0x80:
-        Serial.print("\nData from ID : 0x");
-        Serial.println(canId,HEX); // 16진수로 ID 출력
-        for(int i=0;i<len;i++){
-            Serial.print(buf[i]);
-            Serial.print("\t");
-        }
-        Serial.print("\n");
-        
-        break;
-    
-    default:
-        break;
-    }
-    
-}
-```
----
-초음파 데이터
+초음파 데이터 수집
 ```c++
 float read_Ultrasonic() {
     float return_time;
@@ -357,7 +328,7 @@ void loop(){
 MCP_CAN CAN(spiCSPin_mega);
 ```
 ---
-Interrupt 발생 시 동작하는 함수
+데이터 수신할 때 동작하는 CAN 통신
 ```c++
 void CAN_INT(){
     unsigned char len = 0;
