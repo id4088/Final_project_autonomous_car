@@ -405,9 +405,10 @@ void serialEvent(){
  2. 실시간 데이터를 모델에 적용하여 자율주행 구현
 
 #### 4.3.1 Tensorflow Modeling
-
+ 1. 수집한 데이터 전처리
+ 2. Tensorflow Modeling
 ---
-PC python 헤더파일 및 전역변수
+PC python 헤더파일
  ```python
 import os
 import random
@@ -611,7 +612,8 @@ for i in range(n_tests_show):
 plt.show()
 ```
 ---
-#### 4.3.1 자율주행
+#### 4.3.2 자율주행 시스템
+ + 구현 실패
 ---
  ```python
  import cv2
