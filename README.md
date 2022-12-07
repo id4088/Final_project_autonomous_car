@@ -549,9 +549,12 @@ for i in range(nrow):
 
 model_output_dir = 'C:\\Users\\KOSTA\\tensorflow\\AI_data'
 
-checkpoint_callback = tensorflow.keras.callbacks.ModelCheckpoint(filepath=os.path.join(model_output_dir,'lane_navigation_check.h5'),verbose=1,save_best_only=True)
+checkpoint_callback = tensorflow.keras.callbacks.ModelCheckpoint(filepath=os.path.join(model_output_dir,'lane_navigation_check.h5'),
+	verbose=1,save_best_only=True)
 
-history = model.fit_generator(image_data_generator(X_train,y_train, batch_size =100),steps_per_epoch=300,epochs=10,validation_data=image_data_generator(X_valid,y_valid,batch_size=100),validation_steps=200,verbose=1,shuffle=1,callbacks=[checkpoint_callback])
+history = model.fit_generator(image_data_generator(X_train,y_train, batch_size =100),
+	steps_per_epoch=300,epochs=10,validation_data=image_data_generator(X_valid,y_valid,batch_size=100),
+	validation_steps=200,verbose=1,shuffle=1,callbacks=[checkpoint_callback])
 
 model.save(os.path.join(model_output_dir,'lane_navigation_final.h5'))
 
