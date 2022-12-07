@@ -48,7 +48,7 @@
  3. ps4 듀얼 쇼크4 를 사용하기 위한 Class 생성 및 Class 상속 사용
  4. ps4 듀얼 쇼크4 포트 js0 포트로 Bluetooth 통신
 ---
-헤더파일 및 전역변수
+RPI4 헤더파일 및 전역변수
 ```python
 import cv2
 import numpy as np
@@ -207,7 +207,7 @@ if __name__ == '__main__':
  1. ttyACM0 포트로 시리얼 통신
  2. serialEvent 함수 사용
 ---
-시리얼 통신을 통해서 데이터가 입력될 때 자동으로 호출되는 함수인 serialEvent 함수
+serialEvent 함수를 통한 Motor 
 ```c++
 void serialEvent(){
     while (Serial.available())
@@ -242,7 +242,7 @@ void serialEvent(){
  2. MCP2515-lib-master 라이브러리 및 SPI 라이브러리 사용
 #### 4.2.1 Arduino Uno CAN 및 초음파
 ---
-헤더파일 및 전역변수
+Arduino Uno 헤더파일 및 전역변수
 ```c++
 #include <SPI.h>
 #include <mcp_can.h>
@@ -274,7 +274,7 @@ float read_Ultrasonic() {
 }
 ```
 ---
-초음파 데이터 전송
+수집한 데이터 Arduino Mega로 초음파 데이터 전송
 ```c++
 void Send_Ultrasonic_data(){
     distance_union du;
@@ -290,7 +290,7 @@ void Send_Ultrasonic_data(){
 }
 ```
 ---
-Arduino uno CAN 통신 setup
+Arduino Uno CAN 통신 setup
 ```c++
 void setup(){
     Serial.begin(115200);
@@ -305,7 +305,7 @@ void setup(){
 }
 ```
 ---
-Arduino uno 초음파 데이터 수집 loop
+Arduino Uno 초음파 데이터 수집 loop
 ```c++
 void loop(){
     Send_Ultrasonic_data();
@@ -314,7 +314,7 @@ void loop(){
 ---
 #### 4.2.2 Arduino Mega CAN 통신 및 Buzzer 알람
 ---
-헤더파일 및 전역변수
+Arduino Mega 헤더파일 및 전역변수
 ```c++
 #include <SPI.h>
 #include <mcp_can.h>
@@ -354,7 +354,7 @@ void CAN_INT(){
 }
 ```
 ---
-Arduino mega CAN 통신 setup
+Arduino Mega CAN 통신 setup
 ```c++
 void setup() {
 
@@ -405,7 +405,7 @@ void serialEvent(){
  2. 실시간 데이터를 모델에 적용하여 자율주행 구현
 
 ---
-헤더파일 및 전역변수
+RPI4 헤더파일 및 전역변수
  ```python
 import os
 import random
