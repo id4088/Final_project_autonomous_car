@@ -780,6 +780,11 @@ if __name__ == '__main__':
 ![20221206_162437](https://user-images.githubusercontent.com/112140869/205860322-e6111557-ea27-41aa-b932-81592a4da289.jpg)
 
 ---
+[조이스틱으로 트랙 주행 영상]
+
+https://user-images.githubusercontent.com/112140869/206346287-65a0c4ca-33e9-4107-818d-e4727b151447.mp4
+
+---
 1. 성공적 작업
  + 라즈베리파이와 아두이노를 연동
  + 블루투스 통신을 통한 조이스틱 조종
