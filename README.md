@@ -782,7 +782,7 @@ if __name__ == '__main__':
 ---
 [조이스틱으로 트랙 주행 영상]
 
-https://user-images.githubusercontent.com/112140869/206346287-65a0c4ca-33e9-4107-818d-e4727b151447.mp4
+https://user-images.githubusercontent.com/112140869/206346993-9539967d-d618-4e1c-825f-0675af809038.mp4
 
 ---
 #### 1. 성공한 작업
