@@ -391,8 +391,10 @@ void _Buzzer(){
 }
 
 void loop(){
-    _Buzzer();
-    delay(500);
+    if(ultra_distance <= 20.00){
+        _Buzzer();
+        delay(500);
+    }
 }
 
 void serialEvent(){
