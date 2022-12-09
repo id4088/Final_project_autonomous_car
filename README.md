@@ -337,14 +337,17 @@ void CAN_INT(){
     switch (canId)
     {
     case 0x90:
+        distance_union d;
+        
+
         Serial.print("\nData from ID : 0x");
         Serial.println(canId,HEX); // 16진수로 ID 출력
         for(int i=0;i<len;i++){
-            Serial.print(buf[i]);
-            Serial.print("\t");
+            d.second[i] = buf[i];
         }
-        Serial.print("\n");
-        
+        ultra_distance = d.first;
+        Serial.print(ultra_distance);
+        Serial.print(" CM\n");
         break;
     
     default:
