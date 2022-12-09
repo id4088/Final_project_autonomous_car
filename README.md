@@ -323,6 +323,8 @@ Arduino Mega 헤더파일 및 전역변수
 #define speakerPin 25
 
 MCP_CAN CAN(spiCSPin_mega);
+
+static float ultra_distance;
 ```
 ---
 Arduino Mega CAN 통신 수신 함수
