@@ -54,18 +54,17 @@ import cv2
 import numpy as np
 import threading
 import serial , time
-import enum
-import os
 from pyPS4Controller.controller import Controller
 
 ArduinoSerial = serial.Serial(port = "/dev/ttyACM0", 
 	baudrate= 115200,
 	timeout= 1)
 
-strdata = "on_x_press"
 IMGpath ="/home/pi/project/Finalproject/Track_Img/"
 
 controller = MyController(interface="/dev/input/js0", connecting_using_ds4drv=False)
+// connection_using_ds4drv : ds4drv를 사용하여 컨트롤러를 연결할 경우 True
+// 			     bluetoothctl을 통해 직접 연결할 경우 False
 ```
 ---
 ps4 듀얼 쇼크4 사용을 위한 MyController 클래스 및 Global 클래스
@@ -268,7 +267,8 @@ float read_Ultrasonic() {
     digitalWrite(TRIGPin, LOW);
     
     return_time = pulseIn(ECHOPin, HIGH);
-    time_took = 340.0f * return_time / 10000.0f / 2.0f;
+    time_took = 340.0f * return_time / 10000.0f / 2.0f; 
+    // 편도거리 = 340 m/s * 측정시간 / 2, 10000은 cm로 단위 변환을 위해 사용
     
     return time_took;
 }
@@ -305,7 +305,7 @@ void setup(){
 }
 ```
 ---
-Arduino Uno 초음파 데이터 수집 loop
+Arduino Uno 초음파 데이터 전송 loop
 ```c++
 void loop(){
     Send_Ultrasonic_data();
